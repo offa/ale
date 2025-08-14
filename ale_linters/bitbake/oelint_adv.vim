@@ -38,7 +38,7 @@ function! StripAnsiCodes(line) abort
 endfunction
 
 function! RemoveBranch(line) abort
-    return substitute(a:line, '\[branch:.*', '', 'g')
+    return substitute(a:line, ' \[branch:.*', '', 'g')
 endfunction
 
 call ale#linter#Define('bitbake', {
